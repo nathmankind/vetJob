@@ -1,0 +1,55 @@
+@import "../Basestyles/base.scss";
+
+.post-page-header {
+  background-color: $primary-color;
+  padding: 16px 0px;
+}
+
+.postWrapper {
+  @include flexbox();
+  border-bottom: 1px solid #dadada;
+  &:last-child {
+    border-bottom: none;
+  }
+  .avatar {
+    width: 15%;
+    padding: 12px;
+    .rounded-circle {
+      width: 100%;
+    }
+  }
+  .tags {
+    @include flexbox();
+    p {
+      background: #c1c1c1d9;
+      padding: 0px 8px;
+      border-radius: 4px;
+      color: #595959;
+      font-weight: 600;
+      margin: 0px 8px;
+    }
+  }
+  .postInfoCol {
+    width: 85%;
+
+    .post-actions-wrapper {
+      @include flexbox();
+      border-top: 1px solid #dadada;
+      margin-top: 12px;
+      padding: 4px 0px;
+      justify-content: space-between;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+//Create post page styling
+.create__post {
+  .header {
+    h2 {
+      text-align: center;
+    }
+  }
+}

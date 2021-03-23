@@ -1,0 +1,14 @@
+@import "../Basestyles/base.scss";
+
+.profileWrapper {
+  padding: 30px 0;
+  box-shadow: 0px 1px 5px 3px rgba(86, 89, 95, 0.45);
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  .profile-image-section {
+    .rounded-circle {
+      width: 100%;
+    }
+  }
+}

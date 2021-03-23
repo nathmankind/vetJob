@@ -1,0 +1,69 @@
+@import "../Basestyles/base.scss";
+
+.fairly-section {
+  padding: 80px 0px;
+
+  .fairly-left-col {
+    padding: 12px;
+    img {
+      width: 80%;
+    }
+  }
+  .fairly-right-col {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    h2 {
+      font-weight: bold;
+    }
+  }
+}
+.action-btn {
+  margin-top: 70px;
+  button {
+    background: #5fb0c3;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 1px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    padding: 16px 50px;
+    font-weight: 600;
+  }
+  button:hover {
+    background: #95cbd7;
+  }
+}
+.value-section {
+  padding: 60px 0px;
+  .wrapper {
+    .box-header {
+      width: 22%;
+      &.-a0 {
+        img {
+          background-color: $light-blue;
+          padding: 18px;
+        }
+      }
+      &.-a1 {
+        img {
+          background-color: $light-red;
+        }
+      }
+      &.-a2 {
+        img {
+          background-color: $light-primary;
+        }
+      }
+      img {
+        padding: 12px;
+        border-radius: 20px;
+      }
+    }
+    .header {
+      text-align: left;
+      padding: 30px 0;
+    }
+    .text {
+      text-align: left;
+    }
+  }
+}

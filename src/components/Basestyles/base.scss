@@ -1,0 +1,9 @@
+$primary-color: #44a5b8;
+$light-primary: #c7e3ea;
+$light-red: #fab3bf;
+$light-blue: #a9bcd1;
+
+@mixin flexbox() {
+  display: flex;
+  flex-wrap: nowrap;
+}
