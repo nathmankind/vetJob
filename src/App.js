@@ -13,6 +13,7 @@ import { useDispatch } from "react-redux";
 import { fetchUsers } from "./store/userSlice";
 import { fetchComments } from "./store/commentSlice";
 import { fetchPosts } from "./store/postSlice";
+import { ProtectedRoute } from "./ProtectedRoute";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -40,9 +41,13 @@ const App = () => {
           <Route exact path="/posts">
             <Posts />
           </Route>
+          {/* <ProtectedRoute>
+            <Switch> */}
           <Route path="/posts/create">
             <CreatePost />
           </Route>
+          {/* </Switch>
+          </ProtectedRoute> */}
           <Route path="/posts/:postId">
             <SinglePost />
           </Route>

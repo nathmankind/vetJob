@@ -47,10 +47,12 @@ const userSlice = createSlice({
   },
 });
 const selectAllUsers = (state) => state.users.usersList;
+const selectUsersStatus = (state) => state.users.status;
 
 export const userListReducer = userSlice.reducer;
 export const userListAction = userSlice.actions;
 
 export const userListSelectors = {
   selectAllUsers,
+  selectUsersStatus,
 };

@@ -21,16 +21,18 @@ export const AltNavbar = () => {
                 <Nav.Link eventKey={2} href="/careers">
                   Careers
                 </Nav.Link>
+                <Nav.Link href="/login">Login</Nav.Link>
+                <Nav.Link href="/register">Sign Up</Nav.Link>
               </Nav>
             </Nav>
-            <div>
+            {/* <div>
               <Button variant="outline-success" className="login-button">
-                <Link to="/login">Login</Link>
+               
               </Button>
               <Button className="signup-button" variant="outline-success">
-                <Link to="/register">Sign Up</Link>
+               
               </Button>
-            </div>
+            </div> */}
           </Navbar.Collapse>
         </div>
       </Navbar>

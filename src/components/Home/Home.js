@@ -1,32 +1,35 @@
 import React from "react";
 import BusinessImg from "../../assets/business-man.png";
 import IconElipse from "../../assets/elipse-icon.png";
-import ellipse1 from "../../assets/ellipse-1.png";
-import ellipse2 from "../../assets/ellipse-2.png";
-import ellipse3 from "../../assets/ellipse-3.png";
+import ellipse1 from "../../assets/elip-1.png";
+import ellipse2 from "../../assets/elip-2.png";
+import ellipse3 from "../../assets/elip-3.png";
 import { Container, Row, Col } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 const Home = () => {
   const values = [
     {
       image: ellipse1,
-      header: "Check through search results",
+      header: "Check through available posts",
       text:
         "Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
     },
     {
       image: ellipse2,
-      header: "Check through search results",
+      header: "Search from a list of companies",
       text:
         "Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
     },
     {
       image: ellipse3,
-      header: "Check through search results",
+      header: "Post your job experience",
       text:
         "Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
     },
   ];
+
+  const history = useHistory();
   return (
     <div>
       <div className="top-head">
@@ -45,26 +48,14 @@ const Home = () => {
                 before you move.
               </p>
               <div className="action-btn">
-                <button>Get Started</button>
+                <button
+                  onClick={() => {
+                    history.push("/posts");
+                  }}
+                >
+                  Get Started
+                </button>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="how-it-works text-center">
-        <div className="container">
-          <div className="row py-2 pt-4">
-            <div className="col-md-4">
-              <b>100,000 online courses</b>
-              <p>Explore a variety of fresh topics</p>
-            </div>
-            <div className="col-md-4">
-              <b>Expert instruction</b>
-              <p>Find the right instructor for you</p>
-            </div>
-            <div className="col-md-4">
-              <b>Lifetime access</b>
-              <p>Learn on your schedule</p>
             </div>
           </div>
         </div>

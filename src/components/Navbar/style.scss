@@ -1,0 +1,9 @@
+.navbar-light .navbar-nav .nav-link {
+  color: #5c5c5c;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  &:hover {
+    color: #44a5b8;
+  }
+}

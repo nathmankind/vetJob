@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { Modal, Button, Toast } from "react-bootstrap";
 import axios from "axios";
 
-const DeletePostModal = (props) => {
+const DeleteCommentModal = (props) => {
   const [showToast, setShowToast] = useState(false);
 
   const base_url = process.env.REACT_APP_BACKEND_URL;
   const token = JSON.parse(sessionStorage.getItem("user_payload")).token;
 
-  const handleDeleteSubmit = () => {
+  const handleDelete = () => {
     axios
-      .delete(`${base_url}/posts/${props.post_id}`, {
+      .delete(`${base_url}/comments/${props.commentId}`, {
         headers: {
           token: `${token}`,
         },
@@ -62,7 +62,7 @@ const DeletePostModal = (props) => {
         <Button variant="secondary" onClick={props.onHide}>
           No
         </Button>
-        <Button variant="primary" onClick={handleDeleteSubmit}>
+        <Button variant="primary" onClick={handleDelete}>
           Yes
         </Button>
       </Modal.Footer>
@@ -70,4 +70,4 @@ const DeletePostModal = (props) => {
   );
 };
 
-export default DeletePostModal;
+export default DeleteCommentModal;

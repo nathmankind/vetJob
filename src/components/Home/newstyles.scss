@@ -37,22 +37,7 @@
   .wrapper {
     .box-header {
       width: 22%;
-      &.-a0 {
-        img {
-          background-color: $light-blue;
-          padding: 18px;
-        }
-      }
-      &.-a1 {
-        img {
-          background-color: $light-red;
-        }
-      }
-      &.-a2 {
-        img {
-          background-color: $light-primary;
-        }
-      }
+
       img {
         padding: 12px;
         border-radius: 20px;

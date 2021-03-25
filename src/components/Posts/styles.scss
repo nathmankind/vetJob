@@ -21,7 +21,7 @@
   .tags {
     @include flexbox();
     p {
-      background: #c1c1c1d9;
+      background: #f8000e4a;
       padding: 0px 8px;
       border-radius: 4px;
       color: #595959;
@@ -31,6 +31,19 @@
   }
   .postInfoCol {
     width: 85%;
+
+    .post-details {
+      h4 {
+        margin: 0;
+        margin-top: 4px;
+      }
+      .tags {
+        margin: 4px 0;
+      }
+      .companyName {
+        color: #0591ae;
+      }
+    }
 
     .post-actions-wrapper {
       @include flexbox();
@@ -52,4 +65,37 @@
       text-align: center;
     }
   }
+}
+
+.username {
+  h4 {
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+.comments {
+  background: #44a5b817;
+  padding: 0 12px;
+  border-radius: 8px;
+}
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  button {
+    background: #005c6f;
+    border: none;
+  }
+}
+.view_comment,
+.view_post {
+  cursor: pointer;
+}
+.add-comment {
+  font-weight: 900;
+  color: #0068af;
+  text-decoration: underline;
+  padding: 16px 0;
+  cursor: pointer;
 }

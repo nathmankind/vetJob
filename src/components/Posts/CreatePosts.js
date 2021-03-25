@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const CreatePost = () => {
   const [company, setCompany] = useState("");
-  const [tags, setTags] = useState([{}]);
+  const [tags, setTags] = useState([]);
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
   const [showToast, setShowToast] = useState(false);
@@ -15,21 +15,19 @@ export const CreatePost = () => {
     "marketing",
     "sales",
     "ponzi",
-    "refer",
+    "referrer",
   ];
 
-  const seen = new Set();
-  const uniqueTags = tags.filter((tag) => {
-    const duplicate = seen.has(tag.name);
-    seen.add(tag.name);
-    return !duplicate;
-  });
   const token = JSON.parse(sessionStorage.getItem("user_payload")).token;
+
+  const selectedTags = tags.filter((tg) => tg.isChecked === true);
+
+  const tagged = selectedTags.map((tg) => tg.name);
 
   const createPost = () => {
     const data = {
       company: company,
-      tags: ["scam", "ponzi"],
+      tags: tagged.length === 0 ? ["random"] : tagged,
       title: title,
       post: post,
       image_url: "",
@@ -95,11 +93,14 @@ export const CreatePost = () => {
                       label={tag}
                       type="checkbox"
                       onChange={(e) => {
-                        setTags((initialState) => [
-                          ...initialState,
-                          { name: tag, isChecked: e.target.checked },
-                        ]);
-                        console.log({ name: tag, isChecked: e.target.checked });
+                        let filtered = tags.filter(function (el) {
+                          return el.name !== tag;
+                        });
+                        filtered.push({
+                          name: tag,
+                          isChecked: e.target.checked,
+                        });
+                        setTags(filtered);
                       }}
                       id={`inline-checkbox-1`}
                     />
